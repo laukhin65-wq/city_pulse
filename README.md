@@ -69,6 +69,19 @@ GMSServices.provideAPIKey("YOUR_KEY")
 flutter test
 ```
 
+| Модуль | Тестов |
+|--------|--------|
+| SeedService | 7 |
+| EventLocalDatasource | 11 |
+| FavoriteLocalDatasource | 10 |
+| EventModel | 9 |
+| EventRepositoryImpl | 9 |
+| GetEvents / GetEventById / SaveEvent | 9 |
+| MapBloc | 6 |
+| CreateEventCubit | 5 |
+| FavoriteCubit | 10 |
+| **Итого** | **76** |
+
 ## Сборка
 
 ```bash
