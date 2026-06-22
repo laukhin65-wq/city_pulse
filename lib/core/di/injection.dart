@@ -39,8 +39,12 @@ Future<void> init() async {
     () => EventLocalDatasourceImpl(sl()),
   );
 
-  sl.registerLazySingleton<FavoriteLocalDatasource>(
+  sl.registerLazySingleton<FavoriteLocalDatasourceImpl>(
     () => FavoriteLocalDatasourceImpl(sl()),
+  );
+
+  sl.registerLazySingleton<FavoriteLocalDatasource>(
+    () => sl<FavoriteLocalDatasourceImpl>(),
   );
 
   sl.registerLazySingleton<EventRepository>(
@@ -48,7 +52,7 @@ Future<void> init() async {
   );
 
   sl.registerLazySingleton<FavoriteRepository>(
-    () => sl<FavoriteLocalDatasource>() as FavoriteRepository,
+    () => sl<FavoriteLocalDatasourceImpl>(),
   );
 
   sl.registerLazySingleton(() => GetEvents(sl()));

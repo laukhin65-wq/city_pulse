@@ -4,8 +4,10 @@ import 'package:hive/hive.dart';
 import 'package:city_pulse/core/errors/failures.dart';
 import 'package:city_pulse/core/utils/typedefs.dart';
 import 'package:city_pulse/features/map/data/datasources/favorite_local_datasource.dart';
+import 'package:city_pulse/features/map/domain/repositories/favorite_repository.dart';
 
-class FavoriteLocalDatasourceImpl implements FavoriteLocalDatasource {
+class FavoriteLocalDatasourceImpl
+    implements FavoriteLocalDatasource, FavoriteRepository {
   final Box<String> _box;
 
   const FavoriteLocalDatasourceImpl(this._box);
